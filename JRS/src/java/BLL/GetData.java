@@ -1,18 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package BLL;
 
+import java.util.List;
 import java.io.IOException;
-import java.io.PrintWriter;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Iterator;
 
 import org.jsoup.Jsoup;
@@ -22,99 +12,152 @@ import org.jsoup.select.Elements;
 
 /**
  *
- * @author Thushani
+ * @author Romesh
  */
-public class GetData extends HttpServlet {
+public class GetData {
 
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
+    public static final String MY_PAGE = "https://www.linkedin.com/in/romeyroma";
 
-        String name = request.getParameter("url");
-        String MY_PAGE = name;
-
-        Document doc = Jsoup.connect(MY_PAGE).get();
-
-        Elements elem = doc.select(".profile-section h3");
-
-        for (Iterator<Element> iterator1 = elem.iterator(); iterator1.hasNext();) {
-            Element element1 = iterator1.next();
-            if (element1.text().equals("Experience")) // your comparison  text
-            {
-                Element tableElement1 = element1.parent(); //Your got the expected table Element as per your requirement
-
-                System.out.println(tableElement1.text() + "\n");
-            }
+    public static void main(String[] args) throws IOException {
+        
+        
+        NN.trainNet();
+        String[] userData = "Software Engineer Intern,none,none,none,none,none,none,BSc (Hons) Software Engineering,none,OOP,JavaScript,Java,C#,.NET,CSS,none,none,none,none,none,none,none,none,none,none,none,".split(",");
+        List<Double> results = NN.suggestClass(userData);
+        
+        for(double d: results){
+            System.out.println(d);
         }
-
-        for (Iterator<Element> iterator2 = elem.iterator(); iterator2.hasNext();) {
-            Element element2 = iterator2.next();
-            if (element2.text().equals("Education")) // your comparison  text
-            {
-                Element tableElement2 = element2.parent(); //Your got the expected table Element as per your requirement
-
-                System.out.println(tableElement2.text() + "\n");
-            }
-        }
-
-        for (Iterator<Element> iterator3 = elem.iterator(); iterator3.hasNext();) {
-            Element element3 = iterator3.next();
-            if (element3.text().equals("Skills")) // your comparison  text
-            {
-                Element tableElement3 = element3.parent(); //Your got the expected table Element as per your requirement
-
-                System.out.println(tableElement3.text() + "\n");
-            }
-
-        }
+        
+//        Document doc = Jsoup.connect(MY_PAGE).get();
+//
+//        Elements elem = doc.select(".profile-section h3");
+//
+//        Elements formElements = doc.select(".profile-section");
+//        List<String> UData = new ArrayList<String>();
+//
+//        for (Element formElem11 : formElements) {
+//            Elements formChildren1 = formElem11.select("h3");
+//
+//            for (Element formElem1 : formChildren1) {
+//                if (formElem1.text().equals("Experience")) {
+//                    Element data = formElem1.parent();
+//                    Elements formChildren = data.select("h4.item-title");
+//
+//                    int y = 7 - formChildren.size();
+//
+//                    if (formChildren.size() >= 7) {
+//                        for (int exIndex = 0; exIndex < 7; exIndex++) {
+//
+//                            //System.out.print(formChildren.get(exIndex).text()+",");
+//                            UData.add(formChildren.get(exIndex).text() + ",");
+//                        }
+//                    } else {
+//
+//                        for (int x = y; x > 0; x--) {
+//
+//                            if (x == y) {
+//                                for (int exIndex = 0; exIndex < formChildren.size(); exIndex++) {
+//
+//                                    // System.out.print(formChildren.get(exIndex).text()+",");
+//                                    UData.add(formChildren.get(exIndex).text() + ",");
+//                                }
+//                            }
+//                            String data1 = "None";
+//                            // System.out.print(data1+","); 
+//                            UData.add(data1 + ",");
+//                        }
+//
+//                    }
+//
+//                } else if (formElem1.text().equals("Languages")) {
+//                    System.out.print("None,None,None,None,None,None,None");//UData.add("None,"); 
+//                }
+//
+//            }
+//        }
+//
+//        for (Element formElem22 : formElements) {
+//            Elements formChildren2 = formElem22.select("h3");
+//
+//            for (Element formElem2 : formChildren2) {
+//                if (formElem2.text().equals("Education")) {
+//                    Element data = formElem2.parent();
+//                    Elements formChildren = data.select("h5.item-subtitle");
+//
+//                    int y = 2 - formChildren.size();
+//                    if (formChildren.size() >= 2) {
+//                        for (int exIndex = 0; exIndex < 2; exIndex++) {
+//
+//                            // System.out.print(formChildren.get(exIndex).text()+",");
+//                            if (!formChildren.get(exIndex).text().equals("")) {
+//                                UData.add(formChildren.get(exIndex).text() + ",");
+//                            } else {
+//                                UData.add("None,");
+//                            }
+//                        }
+//                    } else {
+//
+//                        for (int x = y; x > 0; x--) {
+//
+//                            if (x == y) {
+//                                for (int exIndex = 0; exIndex < formChildren.size(); exIndex++) {
+//
+//                                    //System.out.print(formChildren.get(exIndex).text()+",");
+//                                    UData.add(formChildren.get(exIndex).text() + ",");
+//                                }
+//                            }
+//                            String data1 = "None";
+//                            //  System.out.print(data1+","); 
+//                            UData.add(data1 + ",");
+//                        }
+//
+//                    }
+//
+//                }
+//            }
+//        }
+//
+//        for (Element formElem22 : formElements) {
+//            Elements formChildren2 = formElem22.select("h3");
+//
+//            for (Element formElem2 : formChildren2) {
+//                if (formElem2.text().equals("Skills")) {
+//                    Element data = formElem2.parent();
+//                    Elements formChildren = data.select("li.skill > a");
+//
+//                    int y = 17 - formChildren.size();
+//
+//                    if (formChildren.size() >= 17) {
+//                        for (int exIndex = 0; exIndex < 17; exIndex++) {
+//
+//                            // System.out.print(formChildren.get(exIndex).text()+",");
+//                            UData.add(formChildren.get(exIndex).text() + ",");
+//                        }
+//                    } else {
+//
+//                        for (int x = y; x > 0; x--) {
+//
+//                            if (x == y) {
+//                                for (int exIndex = 0; exIndex < formChildren.size(); exIndex++) {
+//
+//                                    //System.out.print(formChildren.get(exIndex).text()+",");
+//                                    UData.add(formChildren.get(exIndex).text() + ",");
+//                                }
+//                            }
+//                            String data1 = "None";
+//                            //System.out.print(data1+","); 
+//                            UData.add(data1 + ",");
+//                        }
+//
+//                    }
+//                }
+//            }
+//        }
+//
+//        for (String d : UData) {
+//            System.out.print(d);
+//        }
     }
-
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-    /**
-     * Handles the HTTP <code>GET</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
-    }
-
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
-    }
-
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
-    @Override
-    public String getServletInfo() {
-        return "Short description";
-    }// </editor-fold>
 
 }
