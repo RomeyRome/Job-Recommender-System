@@ -1,0 +1,39 @@
+@relation jobs
+
+@attribute Experience1 {"none","Software Engineer Intern", "Software Engineering Intern", "Software Engineer Internship", "Trainee Software Engineer", "Junior Software Engineer", "Associate Software Engineer", "Senior Software Engineer", "Software Engineer", "Tech Lead", "Associate Project Manager", "Project Manager"}
+@attribute Experience2 {"none","Software Engineer Intern", "Software Engineering Intern", "Software Engineer Internship", "Trainee Software Engineer", "Junior Software Engineer", "Associate Software Engineer", "Senior Software Engineer", "Software Engineer", "Tech Lead", "Associate Project Manager", "Project Manager"}
+@attribute Experience3 {"none","Software Engineer Intern", "Software Engineering Intern", "Software Engineer Internship", "Trainee Software Engineer", "Junior Software Engineer", "Associate Software Engineer", "Senior Software Engineer", "Software Engineer", "Tech Lead", "Associate Project Manager", "Project Manager"}
+@attribute Experience4 {"none","Software Engineer Intern", "Software Engineering Intern", "Software Engineer Internship", "Trainee Software Engineer", "Junior Software Engineer", "Associate Software Engineer", "Senior Software Engineer", "Software Engineer", "Tech Lead", "Associate Project Manager", "Project Manager"}
+@attribute Experience5 {"none","Software Engineer Intern", "Software Engineering Intern", "Software Engineer Internship", "Trainee Software Engineer", "Junior Software Engineer", "Associate Software Engineer", "Senior Software Engineer", "Software Engineer", "Tech Lead", "Associate Project Manager", "Project Manager"}
+@attribute Experience6 {"none","Software Engineer Intern", "Software Engineering Intern", "Software Engineer Internship", "Trainee Software Engineer", "Junior Software Engineer", "Associate Software Engineer", "Senior Software Engineer", "Software Engineer", "Tech Lead", "Associate Project Manager", "Project Manager"}
+@attribute Experience7 {"none","Software Engineer Intern", "Software Engineering Intern", "Software Engineer Internship", "Trainee Software Engineer", "Junior Software Engineer", "Associate Software Engineer", "Senior Software Engineer", "Software Engineer", "Tech Lead", "Associate Project Manager", "Project Manager"}
+
+@attribute Education1 {"none","BSc (Hons) Software Engineering","B.Sc (Hons) in Information Technology","BSc (Hons) Computer Science","Master of Business Administration"}
+@attribute Education2 {"none","BSc (Hons) Software Engineering","B.Sc (Hons) in Information Technology","BSc (Hons) Computer Science","Master of Business Administration"}
+
+@attribute Skill1  {"none","OOP","Java","C#",".NET","C","JavaScript","Python","AngularJS","SQL","XML","Microsoft Word","CSS","Microsoft Office"}
+@attribute Skill2  {"none","OOP","Java","C#",".NET","C","JavaScript","Python","AngularJS","SQL","XML","Microsoft Word","CSS","Microsoft Office"}
+@attribute Skill3  {"none","OOP","Java","C#",".NET","C","JavaScript","Python","AngularJS","SQL","XML","Microsoft Word","CSS","Microsoft Office"}
+@attribute Skill4  {"none","OOP","Java","C#",".NET","C","JavaScript","Python","AngularJS","SQL","XML","Microsoft Word","CSS","Microsoft Office"}
+@attribute Skill5  {"none","OOP","Java","C#",".NET","C","JavaScript","Python","AngularJS","SQL","XML","Microsoft Word","CSS","Microsoft Office"}
+@attribute Skill6  {"none","OOP","Java","C#",".NET","C","JavaScript","Python","AngularJS","SQL","XML","Microsoft Word","CSS","Microsoft Office"}
+@attribute Skill7  {"none","OOP","Java","C#",".NET","C","JavaScript","Python","AngularJS","SQL","XML","Microsoft Word","CSS","Microsoft Office"}
+@attribute Skill8  {"none","OOP","Java","C#",".NET","C","JavaScript","Python","AngularJS","SQL","XML","Microsoft Word","CSS","Microsoft Office"}
+@attribute Skill9  {"none","OOP","Java","C#",".NET","C","JavaScript","Python","AngularJS","SQL","XML","Microsoft Word","CSS","Microsoft Office"}
+@attribute Skill10 {"none","OOP","Java","C#",".NET","C","JavaScript","Python","AngularJS","SQL","XML","Microsoft Word","CSS","Microsoft Office"}
+@attribute Skill11 {"none","OOP","Java","C#",".NET","C","JavaScript","Python","AngularJS","SQL","XML","Microsoft Word","CSS","Microsoft Office"}
+@attribute Skill12 {"none","OOP","Java","C#",".NET","C","JavaScript","Python","AngularJS","SQL","XML","Microsoft Word","CSS","Microsoft Office"}
+@attribute Skill13 {"none","OOP","Java","C#",".NET","C","JavaScript","Python","AngularJS","SQL","XML","Microsoft Word","CSS","Microsoft Office"}
+@attribute Skill14 {"none","OOP","Java","C#",".NET","C","JavaScript","Python","AngularJS","SQL","XML","Microsoft Word","CSS","Microsoft Office"}
+@attribute Skill15 {"none","OOP","Java","C#",".NET","C","JavaScript","Python","AngularJS","SQL","XML","Microsoft Word","CSS","Microsoft Office"}
+@attribute Skill16 {"none","OOP","Java","C#",".NET","C","JavaScript","Python","AngularJS","SQL","XML","CSS","Microsoft Word","Microsoft Office"}
+@attribute Skill17 {"none","OOP","Java","C#",".NET","C","JavaScript","Python","AngularJS","SQL","XML","CSS","Microsoft Word","Microsoft Office"}
+
+@attribute Title {"Software Engineer","Senior Software Engineer","Project Manager"}
+
+@data
+"Software Engineer Intern","none","none","none","none","none","none","BSc (Hons) Software Engineering","none","OOP","JavaScript","Java","C#",".NET","CSS","none","none","none","none","none","none","none","none","none","none","none","Software Engineer"
+"Trainee Software Engineer","none","none","none","none","none","none","BSc (Hons) Software Engineering","none","OOP","Java","C","C#",".NET","CSS",XML,Python,"none","none","none","none","none","none","none","none","none","Software Engineer"
+"Software Engineer Intern","none","none","none","none","none","none","BSc (Hons) Software Engineering","none","OOP","Java","C#",".NET","C","JavaScript","Python","AngularJS","XML","CSS","none","none","none","none","none","none","none","Software Engineer"
+"Software Engineer Intern","none","none","none","none","none","none","BSc (Hons) Software Engineering","none","OOP","Java","C","C#",".NET","CSS",XML,Python,"none","none","none","none","none","none","none","none","none","Software Engineer"
+"Trainee Software Engineer","none","none","none","none","none","none","BSc (Hons) Software Engineering","none","OOP","JavaScript","Java","C#",".NET","CSS","none","none","none","none","none","none","none","none","none","none","none","Software Engineer"

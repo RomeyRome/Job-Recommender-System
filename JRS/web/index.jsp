@@ -1,123 +1,134 @@
+<%-- 
+    Document   : index
+    Created on : Apr 2, 2016, 1:45:24 PM
+    Author     : Romesh
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<!-- /Added by HTTrack -->
 <head>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    ga('create', 'UA-41946666-4', 'auto');
+    ga('send', 'pageview');
 
-    <title>Job Recommendation System</title>
+  </script>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Predikt: Predictive Hiring Software. Instantly Find and Source Top Talent</title>
+  <meta name="description" content="Predikt's recruiting platform instantly recommends qualified active and passive candidates. Algorithmically curated talent pool of developers, engineers, product managers, designers" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Predictive Hiring Software. Instantly Find and Source Top Talent" />
+  <meta property="og:description" content="Leverage the power of Big Data and Data Science for recruiting. Predikt's recruiting platform instantly recommends qualified active and passive talent from an algorithmically curated talent pool of developers, engineers, product managers, designers" />
+  <meta property="og:url" content="https://www.predikt.co/" />
+  <meta property="og:site_name" content="Predikt" />
+  <meta content='INDEX, FOLLOW' name='ROBOTS'>
+  <link rel="shortcut icon" href="images/favicon.ico" />
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" href="css/compiled/theme.css">
+  <link rel="stylesheet" type="text/css" href="css/vendor/animate.css">
 
-    <!-- Custom CSS -->
-    <link href="css/sb-admin.css" rel="stylesheet">
+  <!-- javascript -->
+  <script src="../ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="js/bootstrap/bootstrap.min.js"></script>
+  <script src="js/theme.js"></script>
 
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-</head>
+<body id="home">
+<header class="navbar navbar-inverse hero" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a href="index.html" class="navbar-brand"><img src="images/logo.png" /></a> </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav navbar-right">
+        <li> <a href="adminLogin.jsp"> Admin </a> </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+    
+        <script type="text/javascript" src="//platform.linkedin.com/in.js">
+            api_key: 75a4oosd0t4xnp
+            authorize: true
+            onLoad: onLinkedInLoad
+        </script>
 
-<body>
+        <script type="text/javascript">
 
-    <div id="wrapper">
-
-        <!-- Navigation -->
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.jsp" style="color:#fff">Job Recommendation System</a>
-            </div>
-
-            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav side-nav">
-                    <li class="active">
-                        <a href="index.jsp"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
-                    </li>
-                    <li>
-                        <a href="recommendations.jsp"><i class="fa fa-fw fa-table"></i> Recommendations</a>
-                    </li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </nav>
-
-        <div id="page-wrapper">
-
-            <div class="container-fluid">
-
-                <!-- Page Heading -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1 class="page-header">
-                            Home
-                            <small>Job recommendation based on LinkedIn profile</small>
-                        </h1>
-                        <ol class="breadcrumb">
-                            <li>
-                                <i class="fa fa-dashboard"></i>  <a href="index.jsp">Dashboard</a>
-                            </li>
-                            <li class="active">
-                                <i class="fa fa-file"></i> Home
-                            </li>
-                        </ol>
-                    </div>
-                </div>
-                <!-- /.row -->
-
-                <div class="row">
-                    <div class="col-lg-6">
-
-                        <form role="form" action="GetData" method="post">
-
-                            <div class="form-group">
-                                <label>Text Input</label>
-                                <input class="form-control" placeholder="LinkedIn Url" name="url" id="url">
-                                <p class="help-block">Enter your public LinkedIn profile Url</p>
-                                <p><small>https://www.linkedin.com/pub/{linkedin public profile}</small></p>
-                                <p>&nbsp;                            </p>
-                            </div>
-
-                            <button type="submit" class="btn btn-default">Submit Button</button>
-                            <button type="reset" class="btn btn-default">Reset Button</button>
-
-                            <hr>
-                            <h5>ICBT- Final Year Software Development Project </h5>
-                            <br>
-                            <br>
-
-
-                        </form>
-                    </div>
-                </div>
-
-            </div>
-            <!-- /.container-fluid -->
-
-        </div>
-        <!-- /#page-wrapper -->
-
+            function onLinkedInLoad() {
+                IN.UI.Authorize().place();
+                IN.Event.on(IN, "auth", function () {
+                    onLogin();
+                });
+                IN.Event.on(IN, "logout", function () {
+                    onLogout();
+                });
+            }
+            function onLogin() {
+                IN.API.Profile("me")
+                        .fields("firstName", "lastName", "industry", "publicProfileUrl")
+                        .result(displayProfiles);
+            }
+            function displayProfiles(profiles) {
+                var members = profiles.values;
+                for (var member in members) {
+                    window.location.href='viewResults.jsp?txtAddress='+members[member].publicProfileUrl;
+                }
+            }
+        </script>
+        
+<div id="hero">
+  <div class="container">
+    <h1 class="hero-text animated fadeInDown"> Discover your next Job<br>
+      <strong>Instantly</strong> </h1>
+    <p class="sub-text animated fadeInDown">Our System's AI finds you to Best Fitting Job positions based on your skills in your LinkedIn Profile.</p>
+    <div class="cta animated fadeInDown"><a input type="button" class="button" onclick="onLinkedInLoad()">Get Started</a> </div>
+    <div class="img"></div>
+  </div>
+</div>
+<div id="features">
+  <div class="container">
+    <div class="row feature">
+      <div class="col-md-6 info">
+        <h4><strong>No more Boolean Keyword searching</strong></h4>
+        <h5>Hire smarter, stop spending time with long keyword strings</h5>
+        <p> All the existing sourcing tools offer keyword search interface, which is very cumbersome, requires long strings, does not rank candidates, and importantly, does not understand what you are exactly looking for.
+          We take the pain out of searching, and automatically recommend top candidates. </p>
+      </div>
+      <div class="col-md-6 info">
+        <h4><strong>Automation: Hire for 100's of Jobs</strong></h4>
+        <h5>Using Predikt's technology, you can do months of work in a few hours</h5>
+        <p class="p100"> You can post 100's of Jobs on our platform and automatically get candidate recommendations. Scale your teams instantly. We maintain an algorithmically curated pool of developers, engineers, product managers, designers and other talent. </p>
+      </div>
     </div>
-    <!-- /#wrapper -->
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
+  </div>
+</div>
+<div id="clients">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h3>Ready to find your perfecet fitting Job?</h3>
+      <a href="index.html"> Get Started Now </a> </div>
+    </div>
+  </div>
+</div>
+<div id="footer" class="no-margin">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3 copyright"> © 2016 Predikt Inc </div>
+    </div>
+  </div>
+</div>
 </body>
-
 </html>
